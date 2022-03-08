@@ -2,7 +2,9 @@ pipeline {
     agent any 
     stages {
         stage('creating 10 files with text') { 
-            steps {
+            steps { 
+                echo "Running TASK-1"
+                sh ./Task1.sh
                 // 
             }
         }
