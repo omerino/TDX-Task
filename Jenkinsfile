@@ -19,19 +19,21 @@ pipeline {
         stage('duplicating the files from task2 and set the permission to RO') { 
             steps {
                 echo 'Running Stage-3'
-                sh '/.Task3.sh'
+                sh './Task3.sh'
                 // 
             }
         }
         stage('docker build') { 
             steps {
                 echo 'Building docker image'
+                sh 'docker build -t TDX .'
                 // 
             }
         }
         stage('docker run') { 
             steps {
                 echo 'running dokcer container'
+                sh 'docker run -d TDX --name TDXapp -p 8080:80'
                 // 
             }
         }        
