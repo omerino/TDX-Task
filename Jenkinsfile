@@ -4,6 +4,7 @@ pipeline {
         stage('creating 10 files with text') { 
             steps { 
                 echo 'Running TASK-1'
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh './Task1.sh'
                 // 
             }
