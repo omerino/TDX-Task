@@ -26,14 +26,14 @@ pipeline {
         stage('docker build') { 
             steps {
                 echo 'Building docker image'
-                sh 'docker build -t TDX .'
+                sh 'docker build -t tdx:latest .'
                 // 
             }
         }
         stage('docker run') { 
             steps {
                 echo 'running dokcer container'
-                sh 'docker run -d TDX --name TDXapp -p 8080:80'
+                sh 'docker run -d tdx:latest --name TDXapp -p 8080:80'
                 // 
             }
         }        
