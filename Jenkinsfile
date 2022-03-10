@@ -11,12 +11,14 @@ pipeline {
         stage('duplicating the files and append date and time') { 
             steps {
                 echo 'Running Task-2'
+                sh './Task2.sh'
                 // 
             }
         }
         stage('duplicating the files from task2 and set the permission to RO') { 
             steps {
                 echo 'Running Task-3'
+                sh '/.Task3.sh'
                 // 
             }
         }
