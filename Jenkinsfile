@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('creating 10 files with text') { 
             steps { 
-                echo 'Running TASK-1'
+                echo 'creating 10 files...'
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh './Task1.sh'
                 // 
@@ -11,14 +11,14 @@ pipeline {
         }
         stage('duplicating the files and append date and time') { 
             steps {
-                echo 'Running Task-2'
+                echo 'duplicating the files...'
                 sh './Task2.sh'
                 // 
             }
         }
         stage('duplicating the files from task2 and set the permission to RO') { 
             steps {
-                echo 'Running Task-3'
+                echo 'Running Stage-3'
                 sh '/.Task3.sh'
                 // 
             }
