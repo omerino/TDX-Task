@@ -3,9 +3,6 @@ pipeline {
     stages {
         stage('creating 10 files with text') { 
             steps {
-                echo 'cleaning environment...'
-                sh 'rm -rf ./*'
-                sh 'sleep 3'
                 echo 'creating 10 files...'
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh './Task1.sh'
