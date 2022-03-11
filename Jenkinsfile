@@ -33,7 +33,7 @@ pipeline {
         stage('docker run') { 
             steps {
                 echo 'running dokcer container'
-                sh 'docker run -d tdx:latest --name TDXapp -p 8080:80'
+                sh 'docker run -d --name TDXapp -p 80:80'
                 // 
             }
         }        
