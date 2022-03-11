@@ -2,8 +2,6 @@ FROM nginx
 
 WORKDIR /
 
-COPY ./Task3/*.txt ./
-
-#RUN apt update
+RUN mkdir /home/task3
 
 EXPOSE 80
