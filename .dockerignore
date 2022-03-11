@@ -1,4 +1,4 @@
 Dockerfile
-.dockerignor
+.dockerignore
 Jenkinsfile
 .git
