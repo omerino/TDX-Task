@@ -33,7 +33,7 @@ pipeline {
         stage('docker run') { 
             steps {
                 echo 'running dokcer container'
-                sh 'docker run -p 127.0.0.1:80:80 --name tdxapp -v /home/jenkins/workspace/TDX:/home/task3 -d tdx:latest'
+                sh 'docker run -p 127.0.0.1:80:80 --name tdxapp -v /home/jenkins/workspace/TDX:/home/task3 -d tdx/nginx'
                 // 
             }
         }        
